@@ -1544,12 +1544,15 @@ Dim found As Boolean
 r = UBound(arr, 1)
  
 Dim hash As New Collection
+Dim key As String
+
  
 For i = 0 To r
-    If prelExists(hash, arr(i)) Then
+    key = prelAsciiToHexString(arr(i))
+    If prelExists(hash, key) Then
         ' do nothing
     Else
-        hash.Add arr(i), arr(i)
+        hash.Add arr(i), key
         End If
 Next i
  
@@ -2422,6 +2425,10 @@ Private Function prelAsciiToHexString(ByVal asciiText As String, _
         prelAsciiToHexString = hexPrefix & Join(hexChars, "")
     End If
 End Function
+
+
+
+
 
 
 
