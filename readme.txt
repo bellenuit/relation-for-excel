@@ -44,4 +44,4 @@ Documentation
 http://www.belle-nuit.com/relation-for-excel
 
 matti@belle-nuit.com
-21.8.202
+21.8.2022
